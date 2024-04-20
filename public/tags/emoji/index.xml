@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emoji on kleman.pw</title>
+    <link>http://localhost:1313/tags/emoji/</link>
+    <description>Recent content in Emoji on kleman.pw</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DefCon_ReadTeamVillage-Something_Something_Haystack</title>
+      <link>http://localhost:1313/posts/2021-08-06-defcon_readteamvillage-something_something_haystack/</link>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-08-06-defcon_readteamvillage-something_something_haystack/</guid>
+      
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

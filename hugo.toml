@@ -1,0 +1,46 @@
+baseURL = 'https://kleman.pw/'
+languageCode = 'fr-FR'
+title = 'kleman.pw'
+
+[module]
+  [[module.imports]]
+    path = "github.com/hugo-sid/hugo-blog-awesome"
+
+
+[outputs]
+  home = [ "HTML" ] 
+
+# set markup.highlight.noClasses=false to enable code highlight
+[markup]
+  [markup.highlight]
+    noClasses = false
+
+[menu]
+  [[menu.main]] 
+    # The page reference (pageRef) is useful for menu highlighting
+    # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
+    pageRef="/"
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    pageRef="posts"
+    name = 'Posts'
+    url = '/posts/'
+    weight = 30
+  [[menu.main]]
+    pageRef="whoami"
+    name = 'Whoami'
+    url = '/whoami/'
+    weight = 40
+
+[params]
+  sitename = "kleman.pw"
+  defaultColor = "dark"
+  description = "Site web de kleman."
+
+[params.author]
+  avatar = "img/kleman.jpg"
+  intro = "Kleman"
+  name = "Kleman"
+  description = "Bricoleur du dimanche"

