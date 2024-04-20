@@ -1,6 +1,6 @@
 {
-    "name": "kleman.pw",
-    "short_name": "kleman.pw",
+    "name": "Awesome hugo blog",
+    "short_name": "Awesome hugo blog",
     "start_url": "http://localhost:1313/",
     "theme_color": "#434648",
     "background_color": "#131418",

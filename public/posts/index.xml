@@ -6,7 +6,44 @@
     <description>Recent content in Posts on kleman.pw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Fri, 18 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cours Active Directory du pauvre</title>
+      <link>http://localhost:1313/posts/2024-01-10-cours-ad-du-pauvre/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/2024-01-10-cours-ad-du-pauvre/</guid>
+      
+      <description>On essaye d&amp;rsquo;apprendre des trucs ouuuuuuuuuuuuuuuuuuuu
+Table des matières Table des matières Table des matières Table des matières Installation de la caisse à outils NXC Usage: Impacket Usage: Bloodhound Usage: Evil-winrm Usage: Psencoder Compilation cross OS Package a installé (Chat GPT édition) Compilation d&amp;rsquo;un EXE Compilation d&amp;rsquo;une DLL Windows Shares smbclient mount nxc windows Services windows En mode jolie Unquoted service Extraction de mot de passe Windows Traitement MSSQL Windows Linux RCE IIS WebShell Privilèges SeImpersonate Activation de tout les privilèges Changement d&amp;rsquo;utilisateur Gestion des utilisateurs et groupes Active Directory Enumération des partages sans mot de passes Windows Linux Dump Ldap Linux Bloodhound Windows Linux Création d&amp;rsquo;un compte machine Linux Relais Linux KrbRelayUp Dump Lsass Windows Linux Dump NTDS Windows Linux ADCS Info sur ADCS création de certificats Demande de TGT avec un certificat Récupération du hash via un tgt Relai sur le web enrollement de l&amp;rsquo;ADCS Coerce de gros porc Lab AD Srv standelone plage Installation de la caisse à outils L&amp;rsquo;ensemble des outils requiert Python3.</description>
+      
+    </item>
+    
+    <item>
+      <title>Comment modifier Initramfs afin de récupérer les identifiants LUKS</title>
+      <link>http://localhost:1313/posts/2022-08-18-modifier-initramfs-afin-de-r%C3%A9cup%C3%A9rer-la-passphrase-luks/</link>
+      <pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/2022-08-18-modifier-initramfs-afin-de-r%C3%A9cup%C3%A9rer-la-passphrase-luks/</guid>
+      
+      <description>Modifier la partition de boot pour récupérer la passphrase luks
+TL;DR Actuellement dans un train arrêté sur la voie depuis plus 1h et sans réseau j&amp;rsquo;ai voulu trouver un moyen de récupérer la passphrase d&amp;rsquo;une partition luks.
+Concept Notre but est de récupérer la passphrase luks d’une partition. Le bruteforce de partition luks est trés lent cela rend les attaques par dictionnaire inefficace. Il nous reste le social engineering, où il est possible d’utiliser un keylogger hardware afin derécupérer la passphrase via un réseau wifi ou bluetooth.</description>
+      
+    </item>
+    
+    <item>
+      <title>Transformer un pc portable en carte wifi</title>
+      <link>http://localhost:1313/posts/2022-05-31-transformer-un-pc-portable-en-carte-wifi/</link>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/2022-05-31-transformer-un-pc-portable-en-carte-wifi/</guid>
+      
+      <description>Transformer un pc portable en carte wifi pour ne pas être obligé de faire un trou dans le mur de papa maman s
+TL;DR Actuellement en vacances je suis confronté au problème du câble ethernet, En effet quand je suis chez moi je peux tirer un cable ethernet entre ma box et mon pc mais chez mes parents ce n&amp;rsquo;est pas possible. Sachant que ma tour n&amp;rsquo;a pas de carte wifi il va falloir trouver une solution.</description>
+      
+    </item>
+    
     <item>
       <title>OSCP retour d&#39;experience</title>
       <link>http://localhost:1313/posts/2022-03-18-oscp-retour-experience/</link>
