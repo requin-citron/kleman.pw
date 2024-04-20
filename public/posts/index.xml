@@ -15,7 +15,9 @@
       <guid>http://localhost:1313/posts/2024-01-10-cours-ad-du-pauvre/</guid>
       
       <description>On essaye d&amp;rsquo;apprendre des trucs ouuuuuuuuuuuuuuuuuuuu
-Table des matières Table des matières Table des matières Table des matières Installation de la caisse à outils NXC Usage: Impacket Usage: Bloodhound Usage: Evil-winrm Usage: Psencoder Compilation cross OS Package a installé (Chat GPT édition) Compilation d&amp;rsquo;un EXE Compilation d&amp;rsquo;une DLL Windows Shares smbclient mount nxc windows Services windows En mode jolie Unquoted service Extraction de mot de passe Windows Traitement MSSQL Windows Linux RCE IIS WebShell Privilèges SeImpersonate Activation de tout les privilèges Changement d&amp;rsquo;utilisateur Gestion des utilisateurs et groupes Active Directory Enumération des partages sans mot de passes Windows Linux Dump Ldap Linux Bloodhound Windows Linux Création d&amp;rsquo;un compte machine Linux Relais Linux KrbRelayUp Dump Lsass Windows Linux Dump NTDS Windows Linux ADCS Info sur ADCS création de certificats Demande de TGT avec un certificat Récupération du hash via un tgt Relai sur le web enrollement de l&amp;rsquo;ADCS Coerce de gros porc Lab AD Srv standelone plage Installation de la caisse à outils L&amp;rsquo;ensemble des outils requiert Python3.</description>
+Installation de la caisse à outils L&amp;rsquo;ensemble des outils requiert Python3. Si ce dernier n&amp;rsquo;est pas installé, vous devez le faire pour garantir un fonctionnement sans entraves.
+NXC NXC, un fork agressif de CrackMapExec (CME), est préféré à CME. NetExec, alias NXC, est un outil polyvalent essentiel à maîtriser dans le contexte de cette évaluation de sécurité.
+git clone https://github.com/Pennyw0rth/NetExec.git cd NetExec python3 -m venv .</description>
       
     </item>
     

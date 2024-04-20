@@ -6,82 +6,6 @@ date: '2024-01-10'
 
 **_On essaye d'apprendre des trucs ouuuuuuuuuuuuuuuuuuuu_**
 
-# Table des matières
-
-# Table des matières
-
-- [Table des matières](#table-des-matières)
-- [Table des matières](#table-des-matières-1)
-- [Installation de la caisse à outils](#installation-de-la-caisse-à-outils)
-  - [NXC](#nxc)
-    - [Usage:](#usage)
-  - [Impacket](#impacket)
-    - [Usage:](#usage-1)
-  - [Bloodhound](#bloodhound)
-    - [Usage:](#usage-2)
-  - [Evil-winrm](#evil-winrm)
-    - [Usage:](#usage-3)
-  - [Psencoder](#psencoder)
-  - [Compilation cross OS](#compilation-cross-os)
-    - [Package a installé (Chat GPT édition)](#package-a-installé-chat-gpt-édition)
-    - [Compilation d'un EXE](#compilation-dun-exe)
-    - [Compilation d'une DLL](#compilation-dune-dll)
-- [Windows](#windows)
-  - [Shares](#shares)
-    - [smbclient](#smbclient)
-    - [mount](#mount)
-    - [nxc](#nxc-1)
-    - [windows](#windows-1)
-  - [Services](#services)
-    - [windows](#windows-2)
-      - [En mode jolie](#en-mode-jolie)
-      - [Unquoted service](#unquoted-service)
-  - [Extraction de mot de passe](#extraction-de-mot-de-passe)
-    - [Windows](#windows-3)
-    - [Traitement](#traitement)
-  - [MSSQL](#mssql)
-    - [Windows](#windows-4)
-    - [Linux](#linux)
-    - [RCE](#rce)
-  - [IIS](#iis)
-    - [WebShell](#webshell)
-  - [Privilèges](#privilèges)
-    - [SeImpersonate](#seimpersonate)
-    - [Activation de tout les privilèges](#activation-de-tout-les-privilèges)
-    - [Changement d'utilisateur](#changement-dutilisateur)
-  - [Gestion des utilisateurs et groupes](#gestion-des-utilisateurs-et-groupes)
-- [Active Directory](#active-directory)
-  - [Enumération des partages sans mot de passes](#enumération-des-partages-sans-mot-de-passes)
-    - [Windows](#windows-5)
-    - [Linux](#linux-1)
-  - [Dump Ldap](#dump-ldap)
-    - [Linux](#linux-2)
-  - [Bloodhound](#bloodhound-1)
-    - [Windows](#windows-6)
-    - [Linux](#linux-3)
-  - [Création d'un compte machine](#création-dun-compte-machine)
-    - [Linux](#linux-4)
-  - [Relais](#relais)
-    - [Linux](#linux-5)
-  - [KrbRelayUp](#krbrelayup)
-  - [Dump Lsass](#dump-lsass)
-    - [Windows](#windows-7)
-    - [Linux](#linux-6)
-  - [Dump NTDS](#dump-ntds)
-    - [Windows](#windows-8)
-    - [Linux](#linux-7)
-  - [ADCS](#adcs)
-    - [Info sur ADCS](#info-sur-adcs)
-    - [création de certificats](#création-de-certificats)
-    - [Demande de TGT avec un certificat](#demande-de-tgt-avec-un-certificat)
-    - [Récupération du hash via un tgt](#récupération-du-hash-via-un-tgt)
-    - [Relai sur le web enrollement de l'ADCS](#relai-sur-le-web-enrollement-de-ladcs)
-    - [Coerce de gros porc](#coerce-de-gros-porc)
-- [Lab](#lab)
-  - [**AD**](#ad)
-  - [Srv standelone](#srv-standelone)
-  - [plage](#plage)
-
 
 # Installation de la caisse à outils
 
@@ -98,7 +22,6 @@ python3 -m venv .
 source ./bin/activate
 pip3 install .
 deactivate
-touch ~/.klemouWasHere
 ```
 
 ### Usage:
@@ -120,7 +43,6 @@ python3 -m venv .
 source ./bin/activate
 pip3 install .
 deactivate
-touch ~/.klemouWasHere1
 ```
 
 ### Usage:
@@ -202,7 +124,7 @@ sudo xbps-install -S mingw-w64-gcc mingw-w64-g++ mingw-w64-headers
 ```
 x86_64-w64-mingw32-gcc -o magie.exe magie.c   # 64 bits
 i686-w64-mingw32-gcc   -o magie.exe magie.c   # 32 bits
-touch ~/.klemou_was_here                      # 128 bits
+touch ~/.KlemouWasHere                        # 128 bits
 ```
 
 ```c
