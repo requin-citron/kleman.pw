@@ -6,10 +6,6 @@ date: '2024-05-01'
 
 # Reverse cyborg firmware
 
-## TLDR;
-
-sadmiaou
-
 ## Analyse
 
 Ce chanllenge est proposé dans le cadre de l'EC2 et est composée de 2 fichier decode-me et generator ainsi que la présentation du flag.
