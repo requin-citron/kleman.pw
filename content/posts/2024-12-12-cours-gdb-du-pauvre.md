@@ -91,6 +91,10 @@ break main                  # break sur main
 break *0xaddress            # break sur l'instruction pointé par l'addresse
 break *0xaddress if $eax=12 # break sur l'instruction pointé par l'addresse avec condition
 
+watch  *(int *)0x600850
+rwatch *(int *)0x600850
+awatch *(int *)0x600850 
+
 continue                    # continue l'éxecution du programme
 ```
 
@@ -101,4 +105,12 @@ print variable    # affiche le contenue de la variable
 print $rax        # affiche le contenue du registre rax
 
 x/x 0xaddresse    # affiche la contenue a l'addresse addresse 
+info registers    # affiche les registres
+```
+
+## Appel de fonction
+
+```
+call (int)system("id")
+jump *0xaddresse
 ```
